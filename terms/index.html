@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Terms of Service | Parallax Marketing Co.</title>
+  <meta name="description" content="How working with Parallax Marketing Co. works: pricing, billing, refunds and disputes, and cancellation.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.parallaxmarketingco.com/terms/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Parallax Marketing Co.">
+  <meta property="og:title" content="Terms of Service | Parallax Marketing Co.">
+  <meta property="og:description" content="Pricing, billing, refund and dispute policy, and cancellation terms for Parallax Marketing Co. clients.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.parallaxmarketingco.com/terms/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon (inline SVG, matches index.html) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B2B'/%3E%3Cstop offset='0.5' stop-color='%23E63C6B'/%3E%3Cstop offset='1' stop-color='%239B51E0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0a'/%3E%3Cpath d='M16 5 L20 18 L16 27 L12 18 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface-2: #161616;
+      --text: #ffffff;
+      --text-dim: #999999;
+      --text-faint: #555555;
+      --border: rgba(255, 255, 255, 0.08);
+      --warm: #FF6B2B;
+      --grad: linear-gradient(100deg, #FF6B2B 0%, #E63C6B 50%, #9B51E0 100%);
+      --maxw: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+
+    /* ---------- Nav ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .logo { line-height: 1; }
+    .logo .mark {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #fff;
+    }
+    .logo .sub {
+      display: block;
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      color: var(--text-dim);
+      margin-top: 3px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--warm); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 8px;
+      width: 42px;
+      height: 42px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      margin: 4px auto;
+      transition: transform .3s ease, opacity .3s ease;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ---------- Legal page ---------- */
+    .legal-head {
+      position: relative;
+      overflow: hidden;
+      padding: 84px 0 46px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-head::before {
+      content: "";
+      position: absolute;
+      top: -55%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 640px;
+      max-width: 130vw;
+      background: radial-gradient(ellipse at center, rgba(155, 81, 224, 0.20) 0%, rgba(255, 107, 43, 0.08) 38%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .legal-head .wrap { position: relative; z-index: 1; }
+    .legal-head h1 {
+      font-size: clamp(34px, 5vw, 54px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .legal-head .updated {
+      color: var(--text-dim);
+      font-size: 15px;
+      margin-top: 16px;
+    }
+
+    .legal-body { padding: 56px 0 96px; }
+    .legal-body .wrap { max-width: 820px; }
+    .legal-body section + section { margin-top: 44px; }
+    .legal-body h2 {
+      font-size: clamp(21px, 2.6vw, 26px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .legal-body h3 {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 24px 0 8px;
+    }
+    .legal-body p { color: var(--text-dim); font-size: 16px; }
+    .legal-body p + p { margin-top: 14px; }
+    .legal-body ul { color: var(--text-dim); font-size: 16px; margin: 14px 0 0 20px; }
+    .legal-body li + li { margin-top: 8px; }
+    .legal-body a {
+      color: var(--warm);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+    .legal-body a:hover { color: #fff; }
+    .callout {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--warm);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-top: 18px;
+    }
+    .callout p { color: #ccc; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-faint);
+    }
+    .footer-inner a:hover { color: var(--warm); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background: rgba(10, 10, 10, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 8px 28px 18px;
+        transform: translateY(-12px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s ease, transform .25s ease;
+      }
+      .nav-links.open { transform: none; opacity: 1; pointer-events: auto; }
+      .nav-links a { width: 100%; padding: 13px 0; border-bottom: 1px solid var(--border); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .nav-toggle { display: block; }
+
+      .legal-head { padding: 56px 0 36px; }
+      .legal-body { padding: 44px 0 72px; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="/" class="logo" aria-label="Parallax Marketing Co. home">
+        <span class="mark">PARALLAX</span>
+        <span class="sub">MARKETING&nbsp;CO.</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="/#services">Services</a>
+        <a href="/#why">Why Parallax</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ============ PAGE HEADER ============ -->
+    <header class="legal-head">
+      <div class="wrap">
+        <span class="eyebrow">Legal</span>
+        <h1>Terms of <span class="grad-text">Service</span></h1>
+        <p class="updated">Last updated: <time datetime="2026-10-14">October 14, 2026</time></p>
+      </div>
+    </header>
+
+    <!-- ============ POLICY ============ -->
+    <div class="legal-body">
+      <div class="wrap">
+
+        <section aria-labelledby="overview">
+          <h2 id="overview">How we work together</h2>
+          <p>
+            Parallax Marketing Co. ("Parallax," "we," "us") provides website design, Google Ads management, call and
+            form tracking, local SEO, and reporting for small, local service businesses. These terms explain how
+            pricing, billing, refunds, and cancellation work when you hire us ("client," "you").
+          </p>
+          <p>
+            We keep things simple and we'd rather talk it through than hide it in fine print. If anything here is
+            unclear, <a href="/#contact">reach out</a> before you sign on and we'll walk you through it.
+          </p>
+        </section>
+
+        <section aria-labelledby="pricing">
+          <h2 id="pricing">Pricing</h2>
+          <p>
+            Every business is different, so our pricing is too. Your price depends on your needs, the scope of the
+            work, your advertising budget, and the size of your business. We'll give you a clear quote before any work
+            begins, and nothing is billed that you haven't agreed to.
+          </p>
+          <div class="callout">
+            <p>
+              <strong>Ad spend is separate.</strong> Money you spend on advertising is paid directly by you to Google
+              (or the ad platform in use). It is not included in our fees and does not pass through us.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="setup">
+          <h2 id="setup">Setup and changes</h2>
+          <p>
+            We go over everything together before launch, including your goals, your offers, your service area, and
+            what the finished work will look like. Once it's built, you're welcome to ask for changes. We want you
+            to be happy with the final result, and we'll work with you to get there.
+          </p>
+        </section>
+
+        <section aria-labelledby="billing">
+          <h2 id="billing">Billing and payment</h2>
+          <p>
+            We bill by invoice, and payments are processed securely through Stripe. Depending on your agreement, you
+            may be billed for a one-time project (such as a website or campaign setup), for ongoing monthly
+            management, or both.
+          </p>
+          <ul>
+            <li><strong>One-time projects</strong> are invoiced as agreed in your quote.</li>
+            <li><strong>Monthly management</strong> renews automatically each billing cycle until you cancel.</li>
+            <li>Payment is due by the date shown on your invoice. If a payment fails, we'll reach out so we can sort it
+              out together.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="refunds">
+          <h2 id="refunds">Refund policy</h2>
+          <p>
+            Because our work is custom and time-based, <strong>we do not offer refunds once services have been
+            delivered.</strong> That includes completed setup, website work, campaign builds, and management
+            performed during a billing period.
+          </p>
+          <p>
+            If you've paid for something and we haven't started on it yet, let us know and we'll make it right.
+            If you ever feel something wasn't delivered the way we agreed, tell us. We'd much rather fix it than
+            have you stay unhappy.
+          </p>
+        </section>
+
+        <section aria-labelledby="disputes">
+          <h2 id="disputes">Disputes</h2>
+          <p>
+            If you have a concern about a charge or about our work, please <a href="/#contact">contact us</a> first.
+            Most issues are simple misunderstandings and we can usually resolve them directly and quickly.
+          </p>
+          <p>
+            If a payment is disputed with a card issuer or bank, we may provide records of the agreement, invoices,
+            and the services delivered in response.
+          </p>
+        </section>
+
+        <section aria-labelledby="cancel">
+          <h2 id="cancel">Cancellation</h2>
+          <p>
+            You can cancel ongoing services at any time. When you cancel, your subscription stops at the end of your
+            current billing cycle and you won't be billed again. Because that cycle is already paid for, we don't
+            prorate or refund the remainder. Work continues through the end of that cycle.
+          </p>
+          <p>
+            To cancel, <a href="/#contact">send us a message</a> and we'll confirm it. If you have your own ad
+            accounts, they remain yours, and we'll help make sure you keep full access to them.
+          </p>
+        </section>
+
+        <section aria-labelledby="results">
+          <h2 id="results">Results</h2>
+          <p>
+            We build everything with the goal of bringing you more calls and quote requests, and we track the numbers
+            so you can see what's working. Marketing results depend on many things outside our control, including
+            your market, competition, season, and budget, so we can't guarantee specific outcomes.
+          </p>
+        </section>
+
+        <section aria-labelledby="changes">
+          <h2 id="changes">Changes to these terms</h2>
+          <p>
+            We may update these terms from time to time. The date at the top of this page shows when they were last
+            updated. Your agreed quote and any written agreement with us apply alongside these terms.
+          </p>
+        </section>
+
+        <section aria-labelledby="contact">
+          <h2 id="contact">Contact</h2>
+          <p>
+            Questions about these terms or about working with us? Use the <a href="/#contact">contact form</a> on our
+            home page and we'll get back to you.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Parallax Marketing Co. All rights reserved.</span>
+      <span><a href="/">Home</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/#contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Footer year (dynamic) ---------- */
+    (function () {
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+
+    /* ---------- Mobile nav ---------- */
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          var open = links.classList.toggle('open');
+          toggle.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        links.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') {
+            links.classList.remove('open');
+            toggle.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
