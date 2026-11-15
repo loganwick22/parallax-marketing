@@ -5,136 +5,186 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Parallax Marketing Co.</title>
   <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0d0b0e">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Favicon (inline SVG, matches index.html) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B2B'/%3E%3Cstop offset='0.5' stop-color='%23E63C6B'/%3E%3Cstop offset='1' stop-color='%239B51E0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0a'/%3E%3Cpath d='M16 5 L20 18 L16 27 L12 18 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+  <link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
 
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --text: #ffffff;
-      --text-dim: #999999;
-      --grad: linear-gradient(100deg, #FF6B2B 0%, #E63C6B 50%, #9B51E0 100%);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-    }
-    /* subtle color wash behind content */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 900px;
-      height: 700px;
-      max-width: 120vw;
-      background: radial-gradient(ellipse at center, rgba(155, 81, 224, 0.22) 0%, rgba(255, 107, 43, 0.08) 38%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .wrap { position: relative; z-index: 1; }
-    .logo { display: inline-block; line-height: 1; margin-bottom: 48px; }
-    .logo .mark {
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: #fff;
-    }
-    .logo .sub {
-      display: block;
-      font-size: 9.5px;
-      font-weight: 500;
-      letter-spacing: 0.32em;
-      color: var(--text-dim);
-      margin-top: 3px;
-    }
-    .code {
-      font-size: clamp(80px, 18vw, 150px);
-      font-weight: 900;
-      line-height: 1;
-      letter-spacing: -0.04em;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-    h1 {
-      font-size: clamp(24px, 4vw, 34px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-top: 12px;
-    }
-    p {
-      color: var(--text-dim);
-      font-size: 17px;
-      margin-top: 14px;
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      padding: 15px 30px;
-      margin-top: 32px;
-      border-radius: 100px;
-      border: 1px solid transparent;
-      text-decoration: none;
-      cursor: pointer;
-      background: var(--grad);
-      color: #fff;
-      box-shadow: 0 6px 22px rgba(230, 60, 107, 0.22);
-      transition: transform .25s ease, box-shadow .3s ease;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 34px rgba(255, 107, 43, 0.55), 0 8px 28px rgba(155, 81, 224, 0.35);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .btn { transition: none; }
-    }
-  </style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
-<body>
-  <div class="wrap">
-    <a href="/" class="logo" aria-label="Parallax Marketing Co. home">
-      <span class="mark">PARALLAX</span>
-      <span class="sub">MARKETING&nbsp;CO.</span>
-    </a>
-    <div class="code" aria-hidden="true">404</div>
-    <h1>Page not found.</h1>
-    <p>Return to Parallax Marketing Co.</p>
-    <a href="/" class="btn">Back to Home</a>
-  </div>
+<body class="theme-ink">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="wrap site-header__in">
+      <a class="logo" href="/" aria-label="Parallax Marketing Co. — home">
+        <svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff6b2b"/><stop offset=".52" stop-color="#e63c6b"/><stop offset="1" stop-color="#9b51e0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="16" cy="16" r="12.2" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M8.2 25.4 16 10.5l7.8 14.9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <circle cx="16" cy="10.5" r="3.5" fill="url(#logo-grad)"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">Parallax</span>
+          <span class="logo__sub">Marketing Co.</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="/#services"><span class="n" aria-hidden="true">01</span>Services</a></li>
+          <li><a href="/#work"><span class="n" aria-hidden="true">02</span>Client work</a></li>
+          <li><a href="/#estimator"><span class="n" aria-hidden="true">03</span>Estimator</a></li>
+          <li><a href="/#why"><span class="n" aria-hidden="true">04</span>Approach</a></li>
+        </ul>
+        <div class="site-nav__foot">
+          <a class="btn btn--primary" href="/#contact">Book a strategy call
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p>Marketing for home service businesses.</p>
+        </div>
+      </nav>
+
+      <a class="btn btn--primary btn--sm header-cta" href="/#contact">Book a call</a>
+
+      <button class="nav-toggle js-only" type="button" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__label">Menu</span>
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="lost" aria-labelledby="lost-title">
+      <div class="hero__fig" aria-hidden="true" data-parallax-fig>
+        <svg class="fig" viewBox="0 0 640 640" focusable="false">
+          <defs>
+            <linearGradient id="fg-brand" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff6b2b"/><stop offset=".52" stop-color="#e63c6b"/><stop offset="1" stop-color="#9b51e0"/>
+            </linearGradient>
+            <radialGradient id="fg-warm">
+              <stop offset="0" stop-color="#ff6b2b" stop-opacity=".34"/><stop offset=".5" stop-color="#e63c6b" stop-opacity=".13"/><stop offset="1" stop-color="#e63c6b" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="fg-cool">
+              <stop offset="0" stop-color="#9b51e0" stop-opacity=".36"/><stop offset="1" stop-color="#9b51e0" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <g class="fig__layer" data-depth="-10">
+            <circle cx="390" cy="250" r="270" fill="url(#fg-cool)"/>
+            <circle cx="270" cy="380" r="220" fill="url(#fg-warm)"/>
+          </g>
+          <g class="fig__layer" data-depth="6">
+            <g class="fig__spin">
+              <circle class="fig__ticks" cx="320" cy="320" r="290"/>
+              <circle class="fig__ticks fig__ticks--major" cx="320" cy="320" r="286"/>
+            </g>
+            <circle class="fig__hair" cx="320" cy="320" r="232"/>
+            <circle class="fig__hair" cx="320" cy="320" r="150"/>
+            <circle class="fig__arc" cx="320" cy="320" r="232" stroke="url(#fg-brand)" transform="rotate(-150 320 320)"/>
+          </g>
+          <!-- The parallax diagram: two observers (A, B) sight one target; the
+               closer the target, the further apart it lands on the far scale. -->
+          <g class="fig__layer" data-depth="14">
+            <line class="fig__scale" x1="170" y1="86" x2="470" y2="86"/>
+            <line class="fig__scale-ticks" x1="170" y1="86" x2="470" y2="86"/>
+            <line class="fig__scale" x1="170" y1="540" x2="470" y2="540"/>
+            <line class="fig__dash" id="f-dist" x1="320" y1="270" x2="320" y2="540"/>
+            <line class="fig__sight" id="f-la" x1="190" y1="540" x2="408.6" y2="86"/>
+            <line class="fig__sight" id="f-lb" x1="450" y1="540" x2="231.4" y2="86"/>
+            <line id="f-br" x1="231.4" y1="68" x2="408.6" y2="68" stroke="url(#fg-brand)" stroke-width="1.6"/>
+            <circle class="fig__dot" id="f-da" cx="408.6" cy="86" r="3.2"/>
+            <circle class="fig__dot" id="f-db" cx="231.4" cy="86" r="3.2"/>
+            <circle class="fig__halo" id="f-th" cx="320" cy="270" r="17"/>
+            <circle id="f-t" cx="320" cy="270" r="6.5" fill="url(#fg-brand)"/>
+            <rect class="fig__obs" x="185" y="535" width="10" height="10"/>
+            <rect class="fig__obs" x="445" y="535" width="10" height="10"/>
+            <text x="320" y="54" text-anchor="middle">Apparent shift</text>
+            <text id="f-tl" x="346" y="274">Target</text>
+            <text x="190" y="566" text-anchor="middle">A</text>
+            <text x="450" y="566" text-anchor="middle">B</text>
+            <text x="320" y="566" text-anchor="middle">Baseline</text>
+          </g>
+        </svg>
+      </div>
+      <div class="wrap">
+        <p class="label">Error <span class="lost__code">404</span></p>
+        <h1 id="lost-title">This page is <em class="grad-text">out of position.</em></h1>
+        <p>The link you followed may be old or mistyped. Nothing is broken on your end. Here's where most people are headed.</p>
+        <div class="lost__links">
+          <a class="btn btn--primary" href="/">Back to the homepage
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="/#work">Client work</a>
+          <a class="btn btn--ghost" href="/#estimator">Missed-call estimator</a>
+          <a class="btn btn--ghost" href="/#contact">Book a strategy call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__top">
+        <p class="site-footer__big">Marketing for home service businesses, <em class="grad-text">measured in calls and jobs.</em></p>
+        <a class="btn btn--primary" href="/#contact">Book a strategy call
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo" href="/" aria-label="Parallax Marketing Co. — home">
+            <svg class="logo__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+              <circle cx="16" cy="16" r="12.2" fill="none" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M8.2 25.4 16 10.5l7.8 14.9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              <circle cx="16" cy="10.5" r="3.5" fill="url(#logo-grad)"/>
+            </svg>
+            <span class="logo__text"><span class="logo__name">Parallax</span><span class="logo__sub">Marketing Co.</span></span>
+          </a>
+          <p>Websites, Google Ads, local SEO and call tracking for remodelers, tree services and other local trades.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#work">Client work</a></li>
+            <li><a href="/#estimator">Missed-call estimator</a></li>
+            <li><a href="/#why">Approach</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Client sites</h2>
+          <ul>
+            <li><a href="https://mccarthytreeservicellc.com/" target="_blank" rel="noopener">McCarthy Tree Service<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.designersshowcaseremodeling.com/" target="_blank" rel="noopener">Designers Showcase Remodeling<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__base">
+        <span>© <span data-year>2026</span> Parallax Marketing Co. All rights reserved.</span>
+        <a class="link" href="#main">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer onerror="document.documentElement.classList.remove('js')"></script>
 </body>
 </html>

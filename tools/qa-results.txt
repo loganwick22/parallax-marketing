@@ -1,0 +1,117 @@
+PASS  no horizontal overflow 320px /
+PASS  no horizontal overflow 320px /privacy/
+PASS  no horizontal overflow 320px /terms/
+PASS  no horizontal overflow 320px /this-page-does-not-exist
+PASS  no horizontal overflow 360px /
+PASS  no horizontal overflow 360px /privacy/
+PASS  no horizontal overflow 360px /terms/
+PASS  no horizontal overflow 360px /this-page-does-not-exist
+PASS  no horizontal overflow 390px /
+PASS  no horizontal overflow 390px /privacy/
+PASS  no horizontal overflow 390px /terms/
+PASS  no horizontal overflow 390px /this-page-does-not-exist
+PASS  no horizontal overflow 768px /
+PASS  no horizontal overflow 768px /privacy/
+PASS  no horizontal overflow 768px /terms/
+PASS  no horizontal overflow 768px /this-page-does-not-exist
+PASS  no horizontal overflow 1024px /
+PASS  no horizontal overflow 1024px /privacy/
+PASS  no horizontal overflow 1024px /terms/
+PASS  no horizontal overflow 1024px /this-page-does-not-exist
+PASS  no horizontal overflow 1440px /
+PASS  no horizontal overflow 1440px /privacy/
+PASS  no horizontal overflow 1440px /terms/
+PASS  no horizontal overflow 1440px /this-page-does-not-exist
+PASS  no horizontal overflow 1920px /
+PASS  no horizontal overflow 1920px /privacy/
+PASS  no horizontal overflow 1920px /terms/
+PASS  no horizontal overflow 1920px /this-page-does-not-exist
+PASS  no JS console errors on any page/width
+PASS  no dead/empty links on /  — 0
+PASS  no dead/empty links on /privacy/  — 0
+PASS  no dead/empty links on /terms/  — 0
+PASS  unknown URL returns 404 status with the custom page
+PASS  no dead/empty links on /this-page-does-not-exist  — 0
+PASS  all internal links and anchors resolve
+PASS  external link reachable: https://mccarthytreeservicellc.com/  — status 200
+PASS  external link reachable: https://mccarthytreeservicellc.com/emergency-tree-service/  — status 200
+PASS  external link reachable: https://mccarthytreeservicellc.com/tree-removal/  — status 200
+PASS  external link reachable: https://mccarthytreeservicellc.com/tree-service-sanford-nc/  — status 200
+PASS  external link reachable: https://www.designersshowcaseremodeling.com/  — status 200
+PASS  external link reachable: https://www.designersshowcaseremodeling.com/kitchen-remodeling  — status 200
+PASS  external link reachable: https://www.designersshowcaseremodeling.com/gallery/kitchens  — status 200
+PASS  external link reachable: https://developers.google.com/terms/api-services-user-data-policy  — status 200
+PASS  external link reachable: https://myaccount.google.com/permissions  — status 200
+PASS  all 16 referenced local assets load
+PASS  og-image.png exists
+PASS  mobile: nav panel hidden by default
+PASS  mobile: toggle opens panel + aria-expanded
+PASS  mobile: page behind menu is inert
+PASS  mobile: focus stays within header while menu open
+PASS  mobile: Escape closes menu and returns focus to toggle
+PASS  mobile: nav link closes menu and scrolls to section  — top=198
+PASS  mobile: body scroll unlocked after close
+PASS  mobile: tap targets are at least 40px
+PASS  mobile: hero CTA is above the fold and full width  — {"bottom":-6912.3125,"h":54,"w":350,"vh":844}
+PASS  slider: arrow keys move the divider  — 56% -> 46%
+PASS  slider: Home/End reach both extremes  — 0/100
+PASS  slider: aria-valuetext describes state
+PASS  slider: visible focus ring on the handle  — solid 3px
+PASS  slider: click/drag sets position  — value 24
+PASS  keyboard: first Tab reveals skip link
+PASS  keyboard: every focused control shows a focus indicator (first 40 stops)
+PASS  FAQ: opens with keyboard
+PASS  estimator: defaults $11,700 / $140,400 / 9.8 jobs  — $11,700a month
+PASS  estimator: Remodeler preset → $18,720  — $18,720a month
+PASS  estimator: HVAC preset → $6,006  — $6,006a month
+PASS  estimator: editing clears preset state; decimals accepted  — 54.2
+PASS  estimator: empty field → no number, clear prompt, field flagged  — —
+PASS  estimator: >100% is capped with a note  — Capped at 100 for this estimate.
+PASS  estimator: blur normalises the capped value
+PASS  estimator: negative → treated as 0 with a note, result $0 + explanation  — $0a month | If every call really is answered, there's no missed-call gap here. Worth confirming against your phone records.
+PASS  estimator: zero calls → $0 with explanation, bars empty
+PASS  estimator: 100% reached later → $0 with explanation
+PASS  estimator: absurd values are capped and still fit the panel  — $1,083,333,333a month
+PASS  estimator: keyboard arrows step number inputs
+PASS  estimator: range slider drives its number field
+PASS  estimator: non-numeric entry handled without NaN
+PASS  estimator: screen-reader status updates (debounced)
+PASS  estimator: inputs have no name attribute and no network request was made
+PASS  estimator: largest result does not overflow at 360px; numeric keypad; 16px inputs  — {"sw":360,"cw":360,"im":"decimal","fs":16}
+PASS  form: empty submit is blocked by validation, nothing sent
+PASS  form: invalid email is blocked, nothing sent
+PASS  form: posts name, email, message + existing access key to the existing endpoint
+PASS  form: estimator values are NOT in the submission
+PASS  form: mocked success shows confirmation, hides form, moves focus
+PASS  form: mocked reject failure shows inline error, keeps entries, re-enables button  — That didn't go through. Nothing was sent. Please try again in a moment.
+PASS  form: mocked network failure shows inline error, keeps entries, re-enables button  — We couldn't reach the form service. Check your connection and try again.
+PASS  no-JS 1440px: all content visible (no hidden reveal states)
+PASS  no-JS 1440px: nav links visible and reachable without the toggle  — {"n":true,"t":true}
+PASS  no-JS 1440px: JS-only controls hidden; estimator shows worked example
+PASS  no-JS 1440px: contact form still posts natively to Web3Forms
+PASS  no-JS 1440px: no horizontal overflow
+PASS  no-JS 390px: all content visible (no hidden reveal states)
+PASS  no-JS 390px: nav links visible and reachable without the toggle  — {"n":true,"t":true}
+PASS  no-JS 390px: JS-only controls hidden; estimator shows worked example
+PASS  no-JS 390px: contact form still posts natively to Web3Forms
+PASS  no-JS 390px: no horizontal overflow
+PASS  reduced motion: figure is static, no spin, no reveals, no smooth scroll  — {"cy":"270","revealOn":false,"spin":"none","smooth":"auto","vis":true}
+PASS  default motion: hero figure animates  — 275.0 -> 292.5
+PASS  hero content fully visible within 1s of DOM ready  — 1,1,1,0.999975,0.998285
+PASS  no scroll hijacking (wheel 600px → scrolled ~600px)  — scrollY 600
+PASS  GA4 tag G-HY8X91YYYF present (script + config)
+PASS  Search Console verification meta unchanged
+PASS  canonical + og:url unchanged
+PASS  legacy anchors #services #why #contact still exist
+PASS  one h1 per page
+PASS  axe 1440px /: 0 violations (47 rules passed, 1 need manual review)
+      manual-review items: color-contrast x110
+PASS  axe 1440px /privacy/: 0 violations (34 rules passed, 1 need manual review)
+PASS  axe 1440px /terms/: 0 violations (34 rules passed, 1 need manual review)
+PASS  axe 1440px /this-page-does-not-exist: 0 violations (32 rules passed, 1 need manual review)
+PASS  axe 390px /: 0 violations (47 rules passed, 1 need manual review)
+PASS  axe 390px /privacy/: 0 violations (36 rules passed, 1 need manual review)
+PASS  axe 390px /terms/: 0 violations (36 rules passed, 1 need manual review)
+PASS  axe 390px /this-page-does-not-exist: 0 violations (34 rules passed, 1 need manual review)
+
+114 passed, 0 failed

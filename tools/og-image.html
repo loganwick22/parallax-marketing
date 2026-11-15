@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG image source — render at 1200x630 (see REBUILD_NOTES.md)</title>
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; background: #0d0b0e; }
+  .og-fig { position: absolute; right: -60px; top: -35px; width: 700px; height: 700px; }
+  .og-fig .fig__spin, .og-fig .fig__arc { animation: none; }
+  .og { position: absolute; inset: 0; padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between; }
+  .og h1 { font-size: 84px; line-height: .98; letter-spacing: -.018em; max-width: 780px; }
+  .og .logo__name { font-size: 40px; } .og .logo__sub { font-size: 12px; margin-top: 6px; }
+  .og .label { font-size: 15px; }
+</style>
+</head>
+<body class="theme-ink">
+  <div class="og-fig"><svg class="fig" viewBox="0 0 640 640" focusable="false">
+          <defs>
+            <linearGradient id="fg-brand" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff6b2b"/><stop offset=".52" stop-color="#e63c6b"/><stop offset="1" stop-color="#9b51e0"/>
+            </linearGradient>
+            <radialGradient id="fg-warm">
+              <stop offset="0" stop-color="#ff6b2b" stop-opacity=".34"/><stop offset=".5" stop-color="#e63c6b" stop-opacity=".13"/><stop offset="1" stop-color="#e63c6b" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="fg-cool">
+              <stop offset="0" stop-color="#9b51e0" stop-opacity=".36"/><stop offset="1" stop-color="#9b51e0" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <g class="fig__layer" data-depth="-10">
+            <circle cx="390" cy="250" r="270" fill="url(#fg-cool)"/>
+            <circle cx="270" cy="380" r="220" fill="url(#fg-warm)"/>
+          </g>
+          <g class="fig__layer" data-depth="6">
+            <g class="fig__spin">
+              <circle class="fig__ticks" cx="320" cy="320" r="290"/>
+              <circle class="fig__ticks fig__ticks--major" cx="320" cy="320" r="286"/>
+            </g>
+            <circle class="fig__hair" cx="320" cy="320" r="232"/>
+            <circle class="fig__hair" cx="320" cy="320" r="150"/>
+            <circle class="fig__arc" cx="320" cy="320" r="232" stroke="url(#fg-brand)" transform="rotate(-150 320 320)"/>
+          </g>
+          <!-- The parallax diagram: two observers (A, B) sight one target; the
+               closer the target, the further apart it lands on the far scale. -->
+          <g class="fig__layer" data-depth="14">
+            <line class="fig__scale" x1="170" y1="86" x2="470" y2="86"/>
+            <line class="fig__scale-ticks" x1="170" y1="86" x2="470" y2="86"/>
+            <line class="fig__scale" x1="170" y1="540" x2="470" y2="540"/>
+            <line class="fig__dash" id="f-dist" x1="320" y1="270" x2="320" y2="540"/>
+            <line class="fig__sight" id="f-la" x1="190" y1="540" x2="408.6" y2="86"/>
+            <line class="fig__sight" id="f-lb" x1="450" y1="540" x2="231.4" y2="86"/>
+            <line id="f-br" x1="231.4" y1="68" x2="408.6" y2="68" stroke="url(#fg-brand)" stroke-width="1.6"/>
+            <circle class="fig__dot" id="f-da" cx="408.6" cy="86" r="3.2"/>
+            <circle class="fig__dot" id="f-db" cx="231.4" cy="86" r="3.2"/>
+            <circle class="fig__halo" id="f-th" cx="320" cy="270" r="17"/>
+            <circle id="f-t" cx="320" cy="270" r="6.5" fill="url(#fg-brand)"/>
+            <rect class="fig__obs" x="185" y="535" width="10" height="10"/>
+            <rect class="fig__obs" x="445" y="535" width="10" height="10"/>
+            <text x="320" y="54" text-anchor="middle">Apparent shift</text>
+            <text id="f-tl" x="346" y="274">Target</text>
+            <text x="190" y="566" text-anchor="middle">A</text>
+            <text x="450" y="566" text-anchor="middle">B</text>
+            <text x="320" y="566" text-anchor="middle">Baseline</text>
+          </g>
+        </svg></div>
+  <div class="og">
+    <div class="logo">
+      <svg class="logo__mark" viewBox="0 0 32 32" width="52" height="52"><circle cx="16" cy="16" r="12.2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8.2 25.4 16 10.5l7.8 14.9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><circle cx="16" cy="10.5" r="3.5" fill="url(#fg-brand)"/></svg>
+      <span class="logo__text"><span class="logo__name">Parallax</span><span class="logo__sub">Marketing Co.</span></span>
+    </div>
+    <div>
+      <h1>Built to make the phone ring. <em class="grad-text">And to show you why it rang.</em></h1>
+    </div>
+    <p class="label label--plain">Marketing for home service businesses</p>
+  </div>
+</body>
+</html>
