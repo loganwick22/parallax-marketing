@@ -112,7 +112,8 @@
       el['f-tl'].setAttribute('x', (tx + 26).toFixed(1)); el['f-tl'].setAttribute('y', (ty + 4).toFixed(1));
     }
 
-    var raf = 0, t0 = 0, visible = true;
+    var raf = 0, t0 = 0, visible = true, paused = false;
+    var motionToggle = $('.motion-toggle');
     function frame(now) {
       if (!t0) t0 = now;
       var t = (now - t0) / 1000;
@@ -120,8 +121,16 @@
       draw(320 + Math.sin(t * 0.37) * 16, 275 + Math.sin(t * 0.52) * 48);
       raf = window.requestAnimationFrame(frame);
     }
-    function start() { if (!raf && visible && !doc.hidden && !reduceMQ.matches) raf = window.requestAnimationFrame(frame); }
+    function start() { if (!raf && visible && !doc.hidden && !reduceMQ.matches && !paused) raf = window.requestAnimationFrame(frame); }
     function stop() { if (raf) { window.cancelAnimationFrame(raf); raf = 0; } }
+
+    if (motionToggle) motionToggle.addEventListener('click', function () {
+      paused = !paused;
+      root.classList.toggle('motion-paused', paused);
+      motionToggle.setAttribute('aria-pressed', String(paused));
+      motionToggle.textContent = paused ? 'Resume animation' : 'Pause animation';
+      if (paused) stop(); else start();
+    });
 
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
@@ -140,7 +149,7 @@
     if (!hero || !finePointer.matches) return;
     var pending = false, px = 0, py = 0;
     hero.addEventListener('pointermove', function (e) {
-      if (reduceMQ.matches) return;
+      if (reduceMQ.matches || root.classList.contains('motion-paused')) return;
       var r = hero.getBoundingClientRect();
       px = (e.clientX - r.left) / r.width - 0.5;
       py = (e.clientY - r.top) / r.height - 0.5;
@@ -163,7 +172,7 @@
     $$('[data-tilt]').forEach(function (stage) {
       var pending = false, x = 0, y = 0;
       stage.addEventListener('pointermove', function (e) {
-        if (reduceMQ.matches) return;
+        if (reduceMQ.matches || root.classList.contains('motion-paused')) return;
         var r = stage.getBoundingClientRect();
         x = ((e.clientX - r.left) / r.width - 0.5) * 2;
         y = ((e.clientY - r.top) / r.height - 0.5) * 2;

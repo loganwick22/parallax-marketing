@@ -980,3 +980,10 @@ html:not(.js) .est__inputs { opacity: .65; pointer-events: none; }
   .reveal-on [data-reveal] { opacity: 1 !important; transform: none !important; }
   body, section, .theme-ink, .theme-paper { background: #fff !important; color: #000 !important; }
 }
+
+/* Explicit pause control for continuous decorative animation. */
+.motion-toggle { display: none; min-height: 44px; padding: 8px 14px; border: 1px solid var(--rule-strong); border-radius: 999px; background: var(--ink-2); color: var(--cream); font: inherit; font-size: .8125rem; cursor: pointer; justify-self: start; }
+.js .motion-toggle { display: inline-flex; align-items: center; }
+.motion-paused .fig__spin, .motion-paused .fig__arc, .motion-paused .hero__fig { animation-play-state: paused; }
+.motion-paused .fig__layer, .motion-paused .browser, .motion-paused .phone { transform: none !important; }
+@media (prefers-reduced-motion: reduce) { .js .motion-toggle { display: none; } }

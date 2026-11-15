@@ -26,3 +26,12 @@ Dot separately visually inspected desktop and 390px mobile hero, verified zero c
 
 ## Local preview
 From this directory: python3 tools/preview.py (http://localhost:4173). Server binds to localhost only. Unknown routes return branded 404 with HTTP 404.
+
+## Independent follow-up QA (Dot)
+- Added a keyboard-operable Pause/Resume animation control for continuous decorative motion and pointer tilt; the existing OS reduced-motion behavior remains. Verified pause freezes SVG motion and resume works by keyboard.
+- Fixed spacing in the footer logo's visible accessible name on home/legal/404 pages.
+- Repeated the functional/axe suite: 114 passed, 0 failed (tools/qa-followup-results.txt). The mobile anchor test now waits for its existing position assertion, bounded to five seconds, instead of assuming long smooth scrolling finishes in 1.2 seconds. Manual 390px browser verification settled at 88px below the viewport top, with menu closed and heading visible. No navigation code changed for this timing issue.
+- Local mobile Lighthouse 12.8.2: Performance 96, Accessibility 100, Best Practices 100, SEO 100; LCP 2.6s, TBT 0ms, CLS 0. This is localhost lab data with analytics blocked, not production field performance or a score guarantee.
+- Sampled contrast tokens: muted text on dark surfaces 5.25–5.88:1, muted text on light 4.99:1; gradient display text minimum 4.34:1 meets large-text criterion. Layered backgrounds still require human review; not exhaustive pixel-level certification.
+- Keyboard/ARIA structures, focus trapping/Escape, sliders and estimator live regions covered. No native screen-reader session or production form submission performed. Real-device coverage, actual inquiry delivery, field Core Web Vitals and full manual accessibility certification remain release follow-ups.
+- All changes remain preview-only. Claude authored the redesign; these scoped accessibility additions and follow-up checks are Dot's independent work.
